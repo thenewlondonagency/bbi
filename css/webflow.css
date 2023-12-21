@@ -1753,6 +1753,7 @@ textarea.w-select {
 }
 .w-tab-menu {
   position: relative;
+  display: flex;
 }
 .w-tab-link {
   position: relative;
