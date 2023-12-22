@@ -26,6 +26,7 @@
 }
 
 .div-block.is-red.mob-view {
+  min-height: auto;
   background-color: rgba(254, 42, 57, 0);
   justify-content: center;
   padding-top: 0;
@@ -33,6 +34,10 @@
 
 .div-block.is-centred {
   justify-content: center;
+}
+
+.div-block.is-fixed {
+  min-height: auto;
 }
 
 .image {
@@ -59,6 +64,9 @@
   flex-direction: column;
   justify-content: flex-start;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
 }
 
 .table_cell {
@@ -95,8 +103,6 @@
   backdrop-filter: blur(10px);
   text-align: left;
   border-radius: 20px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   font-family: Akkurat, sans-serif;
   font-weight: 400;
   overflow: hidden;
@@ -111,7 +117,7 @@
   border-radius: 20px;
   flex-direction: row-reverse;
   align-items: center;
-  margin-top: .5rem;
+  margin-top: 0;
   margin-bottom: .5rem;
   transition: background-color .15s cubic-bezier(.645, .045, .355, 1);
   display: flex;
@@ -157,12 +163,16 @@
 .tab-link-tab-2.w--current {
   color: #fff;
   background-color: #fe2a39;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .text-block-2, .tab-title {
   text-align: center;
   font-family: Akkurat, sans-serif;
+}
+
+.tabs-content {
+  margin-top: 1rem;
 }
 
 .typeform-wrapper-qg2lrdpn {
@@ -182,13 +192,14 @@
 }
 
 .div-block-2.is-mobile {
-  max-height: 95vh;
+  min-height: auto;
   border-radius: 20px;
+  justify-content: center;
+  align-self: center;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 .5rem;
   display: block;
 }
 
@@ -199,6 +210,7 @@
 .tabs-menu {
   border: 0 solid #000;
   border-radius: 20px;
+  display: flex;
   overflow: hidden;
 }
 
@@ -239,12 +251,18 @@
   }
 
   .div-block.is-red.mob-view {
-    min-height: 100vh;
+    min-height: auto;
+    justify-content: flex-start;
   }
 
   .div-block.is-red.mob-view.thank-you-section {
     min-height: 50vh;
     justify-content: flex-start;
+  }
+
+  .div-block.is-fixed {
+    min-height: 50vh;
+    position: static;
   }
 
   .logo-block, .text-block {
@@ -254,6 +272,7 @@
   .content-container {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    position: static;
   }
 
   .div-block-2 {
@@ -261,6 +280,10 @@
     min-height: 80vh;
     flex-direction: column;
     display: flex;
+  }
+
+  .div-block-2.is-mobile {
+    max-height: none;
   }
 
   .div-block-3 {
