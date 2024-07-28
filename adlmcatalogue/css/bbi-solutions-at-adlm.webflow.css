@@ -314,8 +314,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
 }
 
@@ -366,7 +366,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-left: 2rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   display: flex;
 }
 
