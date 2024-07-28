@@ -573,7 +573,6 @@
   align-items: stretch;
   justify-items: stretch;
   width: 90vw;
-  height: 100vh;
   margin-bottom: 1rem;
   display: flex;
 }
