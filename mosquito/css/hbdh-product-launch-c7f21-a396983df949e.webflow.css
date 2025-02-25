@@ -2281,50 +2281,44 @@ p {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-  .hs-table {
+  .peroxidase-table {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 16px;
     line-height: 1.5;
+    table-layout: auto; /* This helps with responsive sizing */
   }
   
-  .hs-table thead th {
+  .peroxidase-table thead th {
     background-color: #f5f8fa;
     color: #33475b;
     font-weight: 600;
     text-align: left;
-    padding: 12px 16px;
+    padding: 16px;
     border-bottom: 2px solid #cbd6e2;
-    white-space: nowrap;
   }
   
-  .hs-table tbody tr {
+  .peroxidase-table tbody tr {
     border-bottom: 1px solid #cbd6e2;
   }
   
-  .hs-table tbody tr:hover {
+  .peroxidase-table tbody tr:hover {
     background-color: #f5f8fa;
   }
   
-  .hs-table td {
-    padding: 12px 16px;
+  .peroxidase-table td {
+    padding: 16px;
     text-align: left;
     vertical-align: top;
   }
   
-  .hs-table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 1rem;
-  }
-  
-  .hs-table-section-header {
+  .peroxidase-table-section-header {
     background-color: #00a4e4;
     color: white;
     font-weight: bold;
-    padding: 12px 16px;
+    padding: 16px;
     text-align: left;
     border: none;
   }
@@ -2334,13 +2328,69 @@ p {
     font-weight: 600;
   }
   
-  @media (max-width: 767px) {
-    .hs-table {
-      font-size: 14px;
+  /* Remove the horizontal scrolling wrapper */
+  .peroxidase-table-container {
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    /* Stack the table for better mobile display */
+    .peroxidase-table {
+      display: block; /* Change from table to block on mobile */
     }
     
-    .hs-table td, .hs-table th {
-      padding: 8px 12px;
+    .peroxidase-table thead, 
+    .peroxidase-table tbody,
+    .peroxidase-table tr {
+      display: block;
+      width: 100%;
+    }
+    
+    /* Make table header hidden but accessible */
+    .peroxidase-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .peroxidase-table tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    .peroxidase-table td {
+      display: block;
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    
+    .peroxidase-table td:before {
+      position: absolute;
+      left: 16px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    
+    /* Define content for the pseudo-elements based on the headers */
+    .peroxidase-table td:nth-of-type(1):before { content: "Product ID"; }
+    .peroxidase-table td:nth-of-type(2):before { content: "Product Name"; }
+    .peroxidase-table td:nth-of-type(3):before { content: "Activity"; }
+    .peroxidase-table td:nth-of-type(4):before { content: "RZ"; }
+    .peroxidase-table td:nth-of-type(5):before { content: "UoM"; }
+    .peroxidase-table td:nth-of-type(6):before { content: "Application"; }
+    
+    /* Make the section header full width */
+    .peroxidase-table-section-header {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
