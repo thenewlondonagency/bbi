@@ -3,6 +3,22 @@
   --black: black;
 }
 
+  .hs-table-responsive {
+    overflow-x: visible !important; /* Force removal of horizontal scroll */
+    width: 100%;
+  }
+  
+  .hs-table {
+    width: 100%;
+    table-layout: fixed; /* This helps distribute column widths */
+  }
+  
+  .hs-table th,
+  .hs-table td {
+    padding: 15px !important; /* Force better spacing */
+    word-wrap: break-word; /* Allow text to wrap */
+  }
+
 body {
   color: #000;
   flex-direction: column;
@@ -2280,119 +2296,6 @@ p {
 #w-node-a24b8e9b-f03e-c2d3-d43c-235cd83fe316-fcc80fd5, #w-node-_328a0179-8e6a-a395-e178-58109727384f-fcc80fd5, #w-node-b4f761b7-5f12-dc5f-6bb6-60dd6c4fe6c3-fcc80fd5, #w-node-cf348f06-e750-a0da-140b-1bc9c31b346e-fcc80fd5, #w-node-_58770e95-37f8-4535-68ce-01bc28d1e4b2-fcc80fd5, #w-node-_84aa3057-d281-e083-0ed7-32f03ca9361f-fcc80fd5, #w-node-_395570e0-2f65-ee62-1cf6-893c2f79b051-fcc80fd5, #w-node-_742ebc8f-5209-0bdf-4a1e-770e01923652-0192364c, #w-node-_742ebc8f-5209-0bdf-4a1e-770e0192365d-0192364c, #w-node-_742ebc8f-5209-0bdf-4a1e-770e01923666-0192364c {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
-
-  .peroxidase-table {
-    width: 100%;
-    margin-bottom: 2.5rem;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    table-layout: auto; /* This helps with responsive sizing */
-  }
-  
-  .peroxidase-table thead th {
-    background-color: #f5f8fa;
-    color: #33475b;
-    font-weight: 600;
-    text-align: left;
-    padding: 16px;
-    border-bottom: 2px solid #cbd6e2;
-  }
-  
-  .peroxidase-table tbody tr {
-    border-bottom: 1px solid #cbd6e2;
-  }
-  
-  .peroxidase-table tbody tr:hover {
-    background-color: #f5f8fa;
-  }
-  
-  .peroxidase-table td {
-    padding: 16px;
-    text-align: left;
-    vertical-align: top;
-  }
-  
-  .peroxidase-table-section-header {
-    background-color: #00a4e4;
-    color: white;
-    font-weight: bold;
-    padding: 16px;
-    text-align: left;
-    border: none;
-  }
-  
-  .product-id {
-    color: #00a4e4;
-    font-weight: 600;
-  }
-  
-  /* Remove the horizontal scrolling wrapper */
-  .peroxidase-table-container {
-    margin-bottom: 2rem;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 992px) {
-    /* Stack the table for better mobile display */
-    .peroxidase-table {
-      display: block; /* Change from table to block on mobile */
-    }
-    
-    .peroxidase-table thead, 
-    .peroxidase-table tbody,
-    .peroxidase-table tr {
-      display: block;
-      width: 100%;
-    }
-    
-    /* Make table header hidden but accessible */
-    .peroxidase-table thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    
-    .peroxidase-table tr {
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-    }
-    
-    .peroxidase-table td {
-      display: block;
-      border: none;
-      position: relative;
-      padding-left: 50%;
-      text-align: left;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-    
-    .peroxidase-table td:before {
-      position: absolute;
-      left: 16px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    
-    /* Define content for the pseudo-elements based on the headers */
-    .peroxidase-table td:nth-of-type(1):before { content: "Product ID"; }
-    .peroxidase-table td:nth-of-type(2):before { content: "Product Name"; }
-    .peroxidase-table td:nth-of-type(3):before { content: "Activity"; }
-    .peroxidase-table td:nth-of-type(4):before { content: "RZ"; }
-    .peroxidase-table td:nth-of-type(5):before { content: "UoM"; }
-    .peroxidase-table td:nth-of-type(6):before { content: "Application"; }
-    
-    /* Make the section header full width */
-    .peroxidase-table-section-header {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
 
 @font-face {
   font-family: 'Akkurat LL';
