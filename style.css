@@ -1057,3 +1057,145 @@ button.input-search-button.slds-button.slds-button_brand.lwc-5j9kqrar72e {
 .slds-icon {
   fill: black !important;
 }
+
+    /* --- Base Setup --- */
+    .hero-wrapper, .hero-wrapper * {
+      box-sizing: border-box;
+      font-family: 'Suisse Intl', -apple-system, sans-serif;
+    }
+
+    /* --- Header --- */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-header .site-branding img {
+      width: 100px; /* Adjusted for better proportion */
+      height: auto;
+    }
+    
+    .site-header .navigation-container {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .site-header .main-navigation a {
+      font-weight: 500; /* Book */
+      font-size: 16px;
+      color: #000000;
+      text-decoration: none;
+      margin: 0 16px;
+      transition: color 0.3s ease;
+    }
+
+    .site-header .main-navigation a:hover {
+      color: #333333;
+    }
+    
+    .site-header .header-cta-buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    .site-header .cta-button {
+      font-weight: 500; /* Book */
+      font-size: 14px;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    /* Matches the "btn-grey" / secondary style from mockup */
+    .site-header .cta-button.secondary {
+      background-color: #dddcde;
+      color: #000000;
+      border: 1px solid #dddcde;
+    }
+     .site-header .cta-button.secondary:hover {
+       background-color: #f4f4f4;
+    }
+
+    /* Matches the "btn-white" / primary style from mockup */
+    .site-header .cta-button.primary {
+      background-color: #333333;
+      color: #ffffff;
+      border: 1px solid #333333;
+    }
+    .site-header .cta-button.primary:hover {
+       background-color: #000000;
+    }
+
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      height: 700px;
+      width: 100%;
+      background-color: #f4f4f4; /* Fallback background color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg-image {
+      /*
+        EDIT BACKGROUND IMAGE URL HERE
+      */
+      background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    /* --- Content --- */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-weight: 300; /* Light */
+      font-size: 4rem;
+      color: #000000;
+      margin: 0;
+    }
+    
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+      .site-header .navigation-container {
+        display: none; /* Hide nav links and CTAs on smaller screens for simplicity */
+      }
+       .site-header {
+        justify-content: flex-start; /* Align logo to the left */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
